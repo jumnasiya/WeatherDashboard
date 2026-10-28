@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>☀ Weather Dashboard</h1>
+      <button id="themeBtn">🌙 Dark</button>
+    </header>
+
+    <p class="subtitle">Check the weather anywhere.</p>
+
+    <form id="searchForm" class="search">
+      <input
+        id="cityInput"
+        type="text"
+        placeholder="Enter city name..."
+        autocomplete="off"
+        required
+      >
+      <button type="submit">Search</button>
+      <div id="suggestions" class="suggestions"></div>
+    </form>
+
+    <p id="status" role="status"></p>
+    <div id="errorMsg" class="error" role="alert"></div>
+    <div id="loader" class="loader" hidden></div>
+
+    <section id="weatherCard" hidden>
+      <div class="weather-card">
+        <div>
+          <p id="location"></p>
+          <h2 id="temperature"></h2>
+          <p id="description"></p>
+        </div>
+        <img id="weatherIcon" alt="Weather icon">
+        <button id="favoriteBtn">♡ Add to favorites</button>
+
+        <div class="details">
+          <p>Feels like <strong id="feelsLike"></strong></p>
+          <p>Humidity <strong id="humidity"></strong></p>
+          <p>Wind <strong id="wind"></strong></p>
+        </div>
+      </div>
+
+      <h2 class="section-title">5-Day Forecast</h2>
+      <div id="forecast" class="forecast"></div>
+    </section>
+
+    <section class="favorites-section">
+      <h2 class="section-title">♡ Favorite Cities</h2>
+      <div id="favoritesList"></div>
+    </section>
+
+    <footer>Weather data by OpenWeatherMap</footer>
+  </main>
+</body>
+</html>
